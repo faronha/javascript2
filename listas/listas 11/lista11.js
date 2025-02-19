@@ -1,68 +1,68 @@
-function mensagem() {
-    console.log("eu gosto de javascript")
+let filmes= ["transformers", "velozes e furiosos", "gato de botas "]
+
+console.log(filmes[0]) 
+
+console.log("----------------")
+
+
+
+let frutas = ["kiwi", "banana", "laranja", "uva", "melancia"]
+
+console.log(frutas[2])
+
+
+console.log("----------------")
+
+let cores = ["vermelho", "azul", "verde"]
+
+cores.push("amarelo")  
+for (let i = 0; i < cores.length; i++) {
+  console.log(cores[i]) 
 }
-mensagem();
 
-console.log("---------------")
 
-function cinco() {
-    for (let i = 1; i <= 5; i++) {
-        console.log(i)
-    }
+console.log("----------------")
+
+let numeros = [1, 2, 3, 4];
+numeros.pop();  
+for (let i = 0; i < numeros.length; i++) {
+  console.log(numeros[i])
 }
-cinco()
 
-console.log("---------------");
 
-function oi() {
-    let nome = prompt("qual seu nome")
-    console.log("ola, " + nome + " seja bem-vindo(a)!")
+console.log("----------------")
+
+
+let cidades = ["sao Paulo", "rio de Janeiro"]
+cidades.unshift("brasilia") 
+for (let i = 0; i < cidades.length; i++) {
+  console.log(cidades[i]) 
 }
-oi()
 
-console.log("---------------")
 
-function multipli(a, b) {
-    console.log(a * b);
+console.log("----------------")
+
+
+let animais = ["cachorro", "gato", "coelho"]
+animais.shift()
+for (let i = 0; i < animais.length; i++) {
+  console.log(animais[i])
 }
-multipli(3, 5);
-console.log("---------------");
-
-function idade() {
-    let idade = prompt("qual sua idade?")
-    if (idade >= 18) {
-        console.log("maior de idade")
-    } else {
-        console.log("menor de idade")
-    }
-}
-idade();
 
 
+console.log("----------------")
 
 
-console.log("---------------")
+let carros = ["Ferrari", "Civic", "Lambo", "Gol Quadrado"]
+console.log(carros.length)  
 
-function retangulo() {
-    let largura = prompt("Quale a largura");
-    let altura = prompt("Quale a aultura");
-    console.log(largura * altura);
-}
-retangulo()
 
-console.log("---------------")
+console.log("----------------")
 
-function comparador() {
-    let idade1 = prompt("Idade da primeira velha");
-    let idade2 = prompt("Idade da segunda velha");
-    if (idade1 > idade2) {
-        console.log("A primeira e mais velha.");
-    } else if (idade1 < idade2) {
-        console.log("A segunda e mais velha.");
-    } else {
-        console.log("As duas pessoas tem a mesma idade.");
-    }
-}
-comparador()
-
-console.log("--------------")
+let numero = []
+numero.push(1,2,3) 
+numero.unshift(4)
+numero.pop() 
+numero.shift() 
+console.log(numero)
+console.log(numero.length)
