@@ -64,3 +64,22 @@ for (let idade = 1; idade <= 10; idade++) {
 
 console.log("--------------------")
 
+for (let i = 1; i <= 5; i++) {
+    let voto = Number(prompt("digite o número do voto (1, 2, 3, 4 para candidatos ou 5 pro nulo, 6 voto em Branco papito):"))
+    
+    if (voto == 1) {
+        console.log("Voto para o Candidato 1")
+    } else if (voto == 2) {
+        console.log("Voto para o Candidato 2")
+    } else if (voto == 3) {
+        console.log("Voto para o Candidato 3")
+    } else if (voto == 4) {
+        console.log("Voto para o Candidato 4")
+    } else if (voto == 5) {
+        console.log("Voto Nulo")
+    } else if (voto == 6) {
+        console.log("Voto em Branco")
+    } else {
+        console.log("Código inválido. Por favor, digite um número de 1 a 6.")
+    }
+}
