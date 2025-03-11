@@ -1,0 +1,79 @@
+.container {
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#botao3 {
+    background-color: white;
+    border: 0;
+    transition: transform 0.5s;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+#porta1:hover{
+    transform: scale(1.3);
+    
+}
+#porta2:hover{
+    transform: scale(1.3);
+    
+}
+
+#porta3:hover{
+    transform: scale(1.3);
+    
+}
+
+
+.container button {
+    margin: 10px;
+    padding: 10px;
+}
+
+.container img {
+    margin-bottom: 10px;
+}
+
+#porta1{
+    background-color: white;
+    border: 0;
+}
+#porta2{
+    background-color: white;
+    border: 0;
+}
+#porta3{
+    background-color: white;
+    border: 0;
+}
+
+#vermelho, #verde, #amarelo{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    border-radius: 100px;
+
+}
+#filmes {
+    display: flex;
+    gap: 20px;
+}
+
+.filme, .filme1, .filme2 {
+    width: 200px;
+    height: 300px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#filmes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

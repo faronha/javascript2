@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <img src="image.png" alt="" id="sumir" >
+    <button onclick="some()">Ecultar a imagem</button>
+
+
+    <p id="texto">Texto Para ser Mudado</p>
+    <button onclick="mudarCor()">Cor</button>
+
+    <p id="textoCompleto">Meu nome é ______, tenho __ anos, moro em ______, estudo na _____ e faço o curso de ____________.</p>
+
+    <button onclick="texto()">Completar</button>
+
+    <p id="texto2" style="background-color: rgba(0, 0, 0, 0.199); width: 70px;">BRASIL</p>
+    <button id="botao1">Clique para mudar a cor</button>
+
+    <button id="botao2" onclick="naoClique()">Nao clique no botão</button>
+
+    
+    <div class="container">
+        <p>Escolha uma porta e receba seu premio</p>
+
+        <button id="porta1" onclick="porta(1)">
+            <div><img id="imagem1" src="portafechada.png" alt="Porta 1" height="100px"></div>
+        </button>
+
+        <button id="porta2" onclick="porta(2)">
+            <div><img id="imagem2" src="portafechada.png" alt="Porta 2" height="100px"></div>
+        </button>
+
+        <button id="porta3" onclick="porta(3)">
+            <div><img id="imagem3" src="portafechada.png" alt="Porta 3" height="100px"></div>
+        </button>
+    </div>
+
+    <button onclick="redimensionar()">Redimensionar</button>
+    <img id="roadhog" src="roadhog.jpg" alt="">
+
+    <div id="vermelho"></div>
+    <div id="amarelo"></div>
+    <div id="verde"></div>
+    <button onclick="semaforo()">Trocar Cor</button>
+
+  
+<div id="filmes">
+    <div class="filme" id="filme1">
+        <img src="comedia.png" alt="Comédia">
+    </div>
+    <div class="filme1" id="filme2">
+        <img src="romance.png" alt="Romance">
+    </div>
+    <div class="filme2" id="filme3">
+        <img src="acao.png" alt="Ação">
+    </div>
+</div>
+
+    <script src="js.js"></script>
+</body>
+</html>
