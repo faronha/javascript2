@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(rgb(73, 44, 82), rgb(139, 109, 135));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .btn{
+            background-color: black;
+            font: 300 30px "arial";
+            padding: 15px 30px;
+            border: none;
+            color: white;
+            transition: ease-in-out 0.4s;
+            width: 200px;
+            border-radius: 15px;
+        }
+        .tituloPrincipal{
+            font: 700 40px "Arial";
+            margin: 20px 0;
+            color: white;
+        }
+        .botoes{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 200px;
+            
+        }
+        button{
+            background-color: blueviolet;
+            border-radius: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1 class="tituloPrincipal">Vamos fazer um curso no Senai?</h1>
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">SIM</button>
+        </div>
+    </div>
+    <div class="botoes">
+        <div class="botaoN">
+            <button class="btn" id="btn" onclick="devia()" onmouseover="desvia()">NAO</button>
+        </div>
+    </div>
+    <script>
+        function sim () {
+            window.location.href = "https://sp.senai.br/unidade/suzano"
+        }
+        function desvia() {
+            let btn = document.getElementById("btn")
+            btn.style.position = "absolute"
+            btn.style.bottom = geraPosicao(10,80)
+            btn.style.left = geraPosicao(10,80)
+        }
+        function geraPosicao (min, max) {
+            return (Math.random() * (max - min) + min) + "%"
+        }
+    </script>
+</body>
+</html>
