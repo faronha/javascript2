@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url('https://www.vice.com/wp-content/uploads/sites/2/2017/07/1499369667118-doomfist-screenshot-003.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #FFD700;
+  }
+  
+  header {
+    padding: 15px 100px 8px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    justify-content: center;
+    border-bottom: 2px solid #FFD700;
+  }
+  
+  header p {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  main {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    height: 600px;
+    margin-top: 20px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  .bxs-chevron-up-circle{
+    color: green;
+  }
+  .bxs-chevron-down-circle {
+    color: red;
+  }
+  
+  .resumo {
+    display: flex;
+    padding: 20px 0;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .resumo > div {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #FFD700;
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    color: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  }
+  
+  .novo-item {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin: 10px;
+  }
+  
+  .divDesc, .divTipo, .divValor {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, select {
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    border-radius: 5px;
+  }
+  
+  label {
+    color: #FFD700;
+    margin-bottom: 5px;
+  }
+  
+  #botao-adicionar {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  #botao-adicionar:hover {
+    background-color: #FFA500;
+    transform: scale(1.05);
+  }
+  
+  .tabela-itens {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  table {
+    width: 98%;
+    padding: 20px 0;
+    border-radius: 5px;
+    color: #FFD700;
+  }
+  
+  th {
+    text-align: start;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+    color: #FFD700;
+  }
+  
+  i {
+    font-size: 25px;
+  }
+  
+  .columnAcao {
+    width: 40px;
+    text-align: center;
+  }
+  
+  .columnAcao > button {
+    background: transparent;
+    border: none;
+    color: #FFD700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .columnAcao > button:hover {
+    color: #FFA500;
+    transform: scale(1.1);
+  }
+  
+  .columnValor {
+    width: 30%;
+  }
+  
+  .columnTipo {
+    width: 80px;
+    text-align: center;
+  }
+  
+  .valor-entradas {
+    color: #00FF00;
+  }
+  
+  .valor-saidas {
+    color: #FF0000;
+  }
+  
+  .valor-total {
+    color: #FFD700;
+  }
+  
