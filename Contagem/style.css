@@ -1,68 +1,76 @@
-*{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(56, 54, 54);
+body{
+    background-color: black;
+    
+    
 }
-h1 {
-    font-size: 50px;
-    margin: auto;
-    display: flex;
-    background-color: rgb(39, 36, 36);
-    justify-content: center;
-}
-div {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    justify-items: left;
+p{
+    color: yellow;
+    font-size: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-#contador {
+div{
+    display: flex;
+    justify-content: baseline;
+    
+}
+#horas{
+    margin: auto;
+    display: flex;
+    padding: 0;
+    justify-items: end;
+    justify-content: center;
+    background-color: rgba(63, 59, 59, 0.438);
+    margin-top: 40px;
     border-radius: 20px;
-    height: 300px;
+    width: 500px;
 
 }
 
 #dias{
-    margin: auto;
-    border-radius: 20px;
-    width: 30%;
-    text-align: center;
+   margin: auto;
     display: flex;
+    padding: 0;
+    justify-items: end;
     justify-content: center;
-    background-color: gray;
-    font-size: 50px;
+    background-color: rgba(63, 59, 59, 0.438);
+    margin-top: 40px;
+    border-radius: 20px;
+    width: 500px;
 }
 
-#horas{
-    margin: auto;
-    border-radius: 20px;
-    width: 30%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-     background-color: gray;
-    font-size: 50px;
-}
 #minutos{
-    margin: auto;
-    border-radius: 20px;
-    width: 30%;
-    text-align: center;
+   margin: auto;
     display: flex;
+    padding: 0;
+    justify-items: end;
     justify-content: center;
-     background-color: gray;
-    font-size: 50px;
+    background-color: rgba(63, 59, 59, 0.438);
+    margin-top: 40px;
+    border-radius: 20px;
+    width: 500px;
 }
+
 #segundos{
    margin: auto;
-    border-radius: 20px;
-    width: 30%;
-    text-align: center;
     display: flex;
+    padding: 0;
+    justify-items: end;
     justify-content: center;
-    padding-left: 20px;
-     background-color: gray;
-    font-size: 50px;
+    background-color: rgba(63, 59, 59, 0.438);
+    margin-top: 40px;
+    border-radius: 20px;
+    width: 500px;
+}
+
+
+
+h1{
+    background-color: rgba(128, 128, 128, 0.5);
+    color: yellow;
+    justify-content: center;
+    font-style: italic;
+    text-align: center;
+    font-size: 60px;
 }

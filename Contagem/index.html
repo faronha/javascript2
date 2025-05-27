@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contagem</title>
+    <title>Contagem Regressiva para o Ano Novo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Contagem Regressiva para 30/05/2025</h1>
+    <div class="container">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <h1>Contagem Regressiva para o Ano Novo</h1>
     <div id="contador">
         <p id="dias"></p>
         <p id="horas"></p>
@@ -16,14 +20,15 @@
         <p id="segundos"></p>
     </div>
     <script>
-        
+    
         function atualizarContador() {
             const agora = new Date()
-            const dataAlvo = new Date(2025, 4, 30) // Maio = 4 pois janeiro é 0
+            const anoAtual = agora.getFullYear()
+            const dataAlvo = new Date(anoAtual + 1, 0, 1) 
             const diferenca = dataAlvo - agora
 
             if (diferenca < 0) {
-                document.getElementById("contador").innerHTML = "<p>Chegou</p>"
+                document.getElementById("contador").innerHTML = "<p>Feliz Ano Novo! 🎉</p>"
                 clearInterval(intervalo)
                 return
             }
@@ -32,13 +37,13 @@
             const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60))
             const segundos = Math.floor((diferenca % (1000 * 60)) / 1000)
             
-            document.getElementById("dias").textContent = "Dias:  " + dias
-            document.getElementById("horas").textContent = "Horas:  "   + horas
-            document.getElementById("minutos").textContent = "Minutos:  " + minutos
-            document.getElementById("segundos").textContent = "Segundos:  " + segundos
+            document.getElementById("dias").textContent = "Dias: " + dias
+            document.getElementById("horas").textContent = "Horas: " + horas
+            document.getElementById("minutos").textContent = "Minutos: " + minutos
+            document.getElementById("segundos").textContent = "Segundos: " + segundos
         }
         atualizarContador()
-        const intervalo = setInterval(atualizarContador,1000)
+        const intervalo = setInterval(atualizarContador, 1000)
     </script>
 </body>
 
