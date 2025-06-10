@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartões Temáticos</title>
+  <style>
+    body {
+      margin: 20px;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 320px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .cartao {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease-in-out;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .cartao.virado {
+      transform: rotateY(180deg);
+    }
+
+    .frente, .verso {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      color: black;
+    }
+
+    .frente {
+      background: #d4145a;
+    }
+
+    .verso {
+      background: #635b5b;
+      transform: rotateY(180deg);
+      font-size: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .verso.namorados {
+      background-image: url('casal.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .verso.namorados::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      z-index: 0;
+    }
+
+    .verso > * {
+      z-index: 1;
+    }
+
+    h1, h2 {
+      margin: 0.5em 0;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    const temas = [
+      {
+        titulo: "Feliz Aniversário 🎉",
+        frente: "Parabéns! 🎂",
+        verso: `<p>Que seu dia seja repleto de alegrias e muitos presentes!</p><p>Felicidades hoje e sempre.</p>`
+      },
+      {
+        titulo: "Feliz Natal 🎄",
+        frente: "Boas Festas! 🎅",
+        verso: `<p>Que o espírito natalino traga paz, amor e união.</p><p>Feliz Natal para você e sua família!</p>`
+      },
+      {
+        titulo: "Feliz Dia das Mães 💐",
+        frente: "Mãe, te amo!",
+        verso: `<p>Obrigado(a) por todo carinho e dedicação.</p><p>Você é minha inspiração.</p>`
+      },
+      {
+        titulo: "Feliz Dia dos Namorados ❤️",
+        frente: "Te Amo! 💖",
+        verso: `<h2>Te Amo! 💖</h2><p>Você é a razão do meu sorriso todos os dias.</p><p>Obrigado(a) por ser tão incrível!</p>`,
+        fundoNamorados: true
+      },
+      {
+        titulo: "Feliz Ano Novo 🎆",
+        frente: "Boas Vibrações!",
+        verso: `<p>Que o próximo ano seja cheio de conquistas e realizações.</p><p>Feliz Ano Novo!</p>`
+      },
+      {
+        titulo: "Feliz Páscoa 🐰",
+        frente: "Páscoa Feliz!",
+        verso: `<p>Que a renovação e a esperança estejam presentes em sua vida.</p><p>Uma Páscoa doce e cheia de amor.</p>`
+      },
+      {
+        titulo: "Feliz Dia do Professor 📚",
+        frente: "Obrigado, professor!",
+        verso: `<p>Seu esforço transforma vidas.</p><p>Gratidão por todo conhecimento compartilhado.</p>`
+      },
+      {
+        titulo: "Cartão de Desculpas 🙏",
+        frente: "Me perdoa?",
+        verso: `<p>Se errei, peço desculpas do fundo do coração.</p><p>Quero consertar tudo e seguir em frente.</p>`
+      },
+      {
+        titulo: "Cartão Motivacional 💪",
+        frente: "Você consegue!",
+        verso: `<p>Acredite no seu potencial e não desista.</p><p>O melhor ainda está por vir!</p>`
+      },
+      {
+        titulo: "Festa Junina 🎉",
+        frente: "Arraiá!",
+        verso: `<p>Vamos dançar quadrilha, comer muito e celebrar juntos!</p><p>Viva São João!</p>`
+      },
+    ];
+
+    const body = document.body;
+
+    temas.forEach(({titulo, frente, verso, fundoNamorados}) => {
+      const container = document.createElement('div');
+      container.className = 'container';
+
+      const cartao = document.createElement('div');
+      cartao.className = 'cartao';
+
+      const divFrente = document.createElement('div');
+      divFrente.className = 'frente';
+      divFrente.innerHTML = `<h1>${titulo}</h1><h2>${frente}</h2>`;
+
+      const divVerso = document.createElement('div');
+      divVerso.className = 'verso';
+      if (fundoNamorados) divVerso.classList.add('namorados');
+      divVerso.innerHTML = verso;
+
+      cartao.appendChild(divFrente);
+      cartao.appendChild(divVerso);
+      container.appendChild(cartao);
+      body.appendChild(container);
+
+      cartao.addEventListener('click', () => {
+        cartao.classList.toggle('virado');
+      });
+    });
+  </script>
+</body>
+</html>
