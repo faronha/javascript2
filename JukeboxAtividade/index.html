@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jukebox Visual</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    #imagem {
+      margin-top: 30px;
+    }
+    #musicaAtual {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎶 Jukebox Visual 🎶</h1>
+  <p>Escolha uma emoção para começar:</p>
+
+  <button onclick="tocar('alegria')">😀 Alegria</button>
+  <button onclick="tocar('tristeza')">😢 Tristeza</button>
+  <button onclick="tocar('aventura')">🧭 Aventura</button>
+  <button onclick="tocar('amor')">❤️ Amor</button>
+  <button onclick="tocar('terror')">👻 Mistério/Terror</button>
+  <button onclick="tocar('calma')">🌿 Calma</button>
+  <button onclick="tocar('energia')">⚡ Animação</button>
+  <button onclick="tocar('suspense')">🕵️ Suspense</button>
+  <button onclick="parar()">🛑 Parar</button>
+
+  <div id="imagem">
+    <img src="" id="foto" width="300" style="display: none;" />
+  </div>
+
+  <div id="musicaAtual"></div>
+
+  <audio src="" id="audio" controls style="margin-top: 20px; display: none;"></audio>
+
+  <script>
+    function tocar(tipo) {
+      const audio = document.getElementById("audio");
+      const foto = document.getElementById("foto");
+      const musicaAtual = document.getElementById("musicaAtual");
+
+      let musica = "";
+      let imagem = "";
+      let cor = "";
+      let nome = "";
+
+      switch(tipo) {
+        case "alegria":
+          musica = 'CHAVES  Música de abertura completa e remasterizada.mp3';
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#ffe066";
+          nome = "Música Feliz";
+          break;
+        case "tristeza":
+          musica = "Lembre de Mim (Canção de Ninar) (De ＂Viva - A Vida é uma Festa＂⧸Com letra).mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#6699cc";
+          nome = "Melodia Triste";
+          break;
+        case "aventura":
+          musica = "Indiana Jones Theme Song [HD].mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#88c999";
+          nome = "Trilha da Aventura";
+          break;
+        case "amor":
+          musica = "George Michael - Careless Whisper (Instrumental - Official Audio) (2).mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#ffb6c1";
+          nome = "Canção Romântica";
+          break;
+        case "terror":
+          musica = "Tema de terror e suspense - Dracula Theme.mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#2c2c2c";
+          nome = "Som de Terror";
+          break;
+        case "calma":
+          musica = "Natiruts - Sorri, Sou Rei (Natiruts Acústico Ao Vivo no Rio de Janeiro).mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#a8e6cf";
+          nome = "Música Relaxante";
+          break;
+        case "energia":
+          musica = "Bonde Do Tigrão - Vou Passar Cerol Na Mão (Martella Martellao).mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#ff6961";
+          nome = "Energia Total";
+          break;
+        case "suspense":
+          musica = "música de (suspense ) sem direito autorais para usar em seus vídeos.mp3";
+          imagem = "https://i.pinimg.com/736x/74/5c/1e/745c1e2b06b421bfc6c165ddd3b555ff.jpg";
+          cor = "#7e7e7e";
+          nome = "Trilha de Suspense";
+          break;
+      }
+
+      document.body.style.backgroundColor = cor;
+      foto.src = imagem;
+      foto.style.display = "block";
+      audio.src = musica;
+      audio.play();
+      audio.style.display = "block";
+      musicaAtual.textContent = "Tocando agora: " + nome;
+    }
+
+    function parar() {
+      const audio = document.getElementById("audio");
+      const foto = document.getElementById("foto");
+      const musicaAtual = document.getElementById("musicaAtual");
+
+      audio.pause();
+      audio.currentTime = 0;
+      audio.style.display = "none";
+      foto.style.display = "none";
+      document.body.style.backgroundColor = "white";
+      musicaAtual.textContent = "";
+    }
+  </script>
+</body>
+</html>
